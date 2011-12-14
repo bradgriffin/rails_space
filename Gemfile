@@ -39,3 +39,7 @@ group :test do
   gem 'webrat', '0.7.1'
 end
 
+gem 'execjs'
+gem 'therubyracer'
+
+
