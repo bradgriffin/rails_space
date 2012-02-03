@@ -38,42 +38,9 @@ class User < ActiveRecord::Base
     return user if user.has_password?(submitted_password)
   end
 
-  def User.authenticate(email, submitted_password)
-    user = find_by_email(email)
-    return nil  if user.nil?
-    return user if user.has_password?(submitted_password)
-  end
-
-  def self.authenticate(email, submitted_password)
-    user = find_by_email(email)
-    return nil  if user.nil?
-    return user if user.has_password?(submitted_password)
-    return nil
-  end
-
-  def self.authenticate(email, submitted_password)
-    user = find_by_email(email)
-    if user.nil?
-      nil
-    elsif user.has_password?(submitted_password)
-      user
-    else
-      nil
-    end
-  end
-
-  def self.authenticate(email, submitted_password)
-    user = find_by_email(email)
-    if user.nil?
-      nil
-    elsif user.has_password?(submitted_password)
-      user
-    end
-  end
-
-  def self.authenticate(email, submitted_password)
-    user = find_by_email(email)
-    user && user.has_password?(submitted_password) ? user : nil
+  def self.authenticate_with_salt(id, cookie_salt)
+    user = find_by_id(id)
+    (user && user.salt == cookie_salt) ? user : nil
   end
 
   private
