@@ -151,3 +151,15 @@ REQUESTING PAGE: POST /sessions with {"commit"=>"Sign in", "session"=>{"password
 REQUESTING PAGE: GET http://www.example.com/users/1 with {} and HTTP headers {"HTTP_REFERER"=>"/sessions"}
 REQUESTING PAGE: GET /signout with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/users/1"}
 REQUESTING PAGE: GET http://www.example.com/ with {} and HTTP headers {"HTTP_REFERER"=>"/signout"}
+REQUESTING PAGE: GET /users/298/edit with {} and HTTP headers {}
+REQUESTING PAGE: GET http://www.example.com/signin with {} and HTTP headers {"HTTP_REFERER"=>"/users/298/edit"}
+REQUESTING PAGE: POST /sessions with {"commit"=>"Sign in", "session"=>{"password"=>"foobar", "email"=>"bgriffin20@gmail.com"}, "utf8"=>"\342\234\223"} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/signin"}
+REQUESTING PAGE: GET http://www.example.com/users/298 with {} and HTTP headers {"HTTP_REFERER"=>"/sessions"}
+REQUESTING PAGE: GET /users/299/edit with {} and HTTP headers {}
+REQUESTING PAGE: GET http://www.example.com/signin with {} and HTTP headers {"HTTP_REFERER"=>"/users/299/edit"}
+REQUESTING PAGE: POST /sessions with {"commit"=>"Sign in", "session"=>{"password"=>"foobar", "email"=>"bgriffin20@gmail.com"}, "utf8"=>"\342\234\223"} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/signin"}
+REQUESTING PAGE: GET http://www.example.com/users/299 with {} and HTTP headers {"HTTP_REFERER"=>"/sessions"}
+REQUESTING PAGE: GET /users/300/edit with {} and HTTP headers {}
+REQUESTING PAGE: GET http://www.example.com/signin with {} and HTTP headers {"HTTP_REFERER"=>"/users/300/edit"}
+REQUESTING PAGE: POST /sessions with {"commit"=>"Sign in", "session"=>{"password"=>"foobar", "email"=>"bgriffin20@gmail.com"}, "utf8"=>"\342\234\223"} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/signin"}
+REQUESTING PAGE: GET http://www.example.com/users/300/edit with {} and HTTP headers {"HTTP_REFERER"=>"/sessions"}
